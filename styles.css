@@ -4,30 +4,40 @@ body {
     margin: 0;
     padding: 0;
     color: #333;
+    background: #fcfcfc;
 }
 
-header {
-    background: #f4f4f4;
+#header {
+    background: #dfdfdf;
     padding: 20px;
     text-align: center;
     position: sticky;
     top: 0;
     z-index: 1000;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    /* justify-content: center; */
+    margin: 0;
+    padding: 0;
+    border-radius: 4px;
 }
 
 #header-img {
     width: 100px;
     height: auto;
+    justify-content: left;
+    margin: auto;
+    border-radius: 4px;
 }
 
 nav {
     width: 100%;
-    background: #007BFF;
     display: flex;
-    justify-content: center;
+    isolation: isolate;
+    flex-direction: column;
+    align-items: end;
+    justify-content:right;
 }
 
 nav ul {
@@ -44,7 +54,9 @@ nav ul li {
 nav ul li a {
     display: block;
     padding: 10px 20px;
-    color: white;
+    color: #333;
+    font-weight: 400;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-decoration: none;
 }
 
@@ -52,17 +64,21 @@ nav ul li a:hover {
     background: #0056b3;
 }
 
-header h1 {
-    margin: 10px 0;
+#wellcome-head h1 {
+    margin: 20px;
     font-size: 2.5em;
 }
 
-header p {
-    margin: 10px 0 0;
+#wellcome-head p {
+    margin: 10px;
 }
 
+P{
+    max-width: 1000px;
+}
 section {
-    padding: 20px;
+    padding: 30px;
+    padding-top: 80px;
 }
 
 #subscribe ul {
@@ -102,6 +118,20 @@ section {
     color: #007BFF;
     text-decoration: none;
 }
+
+.social-icons{
+    display: grid;
+    width: 30%;
+    min-width: 300px;
+    font-size: 3rem;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+  }
+
 
 #testimonials blockquote {
     border-left: 5px solid #007BFF;
